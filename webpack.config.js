@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  mode: "development",
   entry: {
     main: "./src/index.js",
     module: "./src/module.js",
@@ -16,9 +17,17 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+  },
+  // 代码分割：因为该demo有多个入口，不设置可能会报错
+  optimization: {
+    runtimeChunk: "single",
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "管理输出",
+      title: "Development mode",
       template: "./src/index.html",
       meta: {},
       // 自定义内容
@@ -35,7 +44,7 @@ module.exports = {
       // { test: /\.css$/i, use: ["style-loader", "css-loader"] },
       { test: /\.css$/i, use: [MiniCssExtractPlugin.loader, "css-loader"] },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource", // 使用内置 Asset Modules
       },
       {

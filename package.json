@@ -4,6 +4,7 @@
   "description": "Exercises for Webpack5 Official Guides.",
   "private": true,
   "scripts": {
+    "start": "webpack serve --open",
     "build": "webpack"
   },
   "repository": {
