@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "frog";
+  src: url("./assets/Think_Higher.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.hello {
+  font-family: "frog";
+  font-size: 100px;
+  color: brown;
+}
