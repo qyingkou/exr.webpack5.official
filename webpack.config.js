@@ -21,9 +21,13 @@ module.exports = {
   devServer: {
     static: "./dist",
   },
-  // 代码分割：因为该demo有多个入口，不设置可能会报错
   optimization: {
-    runtimeChunk: "single",
+    // 防止出现同一模块的多个实例，保证唯一性
+    // runtimeChunk: "single",
+    // 分离所有的公共模块的代码，还可以指定到chunk（未实现）
+    splitChunks: {
+      chunks: "all",
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

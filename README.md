@@ -29,3 +29,7 @@ javascript 应用的静态模块打包工具，它从入口开始分析依赖图
 ## 开发环境
 
 [develop envirement](./Document/developEnvirement.md)
+
+## 代码分离
+
+[splitChunk](./Document/splitChunk.md)
