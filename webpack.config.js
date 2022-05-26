@@ -9,8 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/index.js",
-    module: "./src/module.js",
+    main: "./src/index.js"
   },
   output: {
     filename: "[name].bundle.js",
@@ -20,14 +19,6 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
-  },
-  optimization: {
-    // 防止出现同一模块的多个实例，保证唯一性
-    // runtimeChunk: "single",
-    // 分离所有的公共模块的代码，还可以指定到chunk（未实现）
-    splitChunks: {
-      chunks: "all",
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({
