@@ -21,3 +21,7 @@ javascript 应用的静态模块打包工具，它从入口开始分析依赖图
 ## 库(library) 打包指南
 
 [guide](./guide_library.md)
+
+## 环境变量
+
+[envVariable](./Document/envVariable.md)

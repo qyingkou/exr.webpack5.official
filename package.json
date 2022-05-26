@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack"
+    "build": "webpack --progress=profile --env abcd=1234"
   },
   "repository": {
     "type": "git",
