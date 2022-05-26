@@ -17,6 +17,8 @@ module.exports = {
     clean: true,
   },
   optimization: {
+    // 确定算法，使得更少的文件hash值产生变化（有益缓存策略）。https://webpack.docschina.org/configuration/optimization/#optimizationmoduleids
+    moduleIds: "deterministic",
     // 提取引导模板(extracting boilerplate)
     runtimeChunk: "single",
     // 提取不太会变的模块

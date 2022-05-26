@@ -19,7 +19,7 @@ output: {
   },
 ```
 
-## 静态资源分分类
+## 进一步抽出某些不太变静态资源
 
 把最不容易变化的代码优先指定和提取出来，比如第三方库提取到单独的文件（vendor chunk）中是比较推荐的做法。
 
@@ -38,4 +38,12 @@ optimization: {
   },
 ```
 
-## 模块标识符（module identifier）固定版本
+## 模块标识符（module identifier），让更少的文件的 hash 值产生变化
+
+```js
+optimization: {
+    // 确定算法，使得更少的文件hash值产生变化（有益缓存策略）。
+    // https://webpack.docschina.org/configuration/optimization/#optimizationmoduleids
+    moduleIds: "deterministic",
+}
+```
