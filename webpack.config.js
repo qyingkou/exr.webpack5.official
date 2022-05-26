@@ -9,12 +9,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/index.js"
+    main: "./src/index.js",
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash:6].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -31,7 +34,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash:10].css",
+      filename: "[name].[contenthash:6].css",
     }),
   ],
   module: {

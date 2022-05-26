@@ -58,12 +58,15 @@ import(/* webpackPrefetch: true */ "./path/to/modal.js");
 prefetch 指令和 preload 指令的不同之处：
 
 - preload chunk 会在父 chunk 加载时，以并行方式开始加载。
-而 prefetch chunk 会在父 chunk 加载结束后开始加载。
+  而 prefetch chunk 会在父 chunk 加载结束后开始加载。
 
 - preload chunk 具有中等优先级，并立即下载。
-而 prefetch chunk 在浏览器闲置时下载。
+  而 prefetch chunk 在浏览器闲置时下载。
 
 - preload chunk 会在父 chunk 中立即请求，用于当下时刻。
-而 prefetch chunk 会用于未来的某个时刻。
+  而 prefetch chunk 会用于未来的某个时刻。
 
 - 浏览器支持程度不同。
+
+[懒加载的示例]
+https://webpack.docschina.org/guides/lazy-loading/
