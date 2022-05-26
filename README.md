@@ -14,26 +14,10 @@ javascript 应用的静态模块打包工具，它从入口开始分析依赖图
 
 [Goto](./Document/principles.md)
 
-## 安装、测试
+## 应用(app)打包指南
 
-[安装和测试](./Document/setup.md)
+[guide](./guide_app.md)
 
-## 资源管理
+## 库(library) 打包指南
 
-[配置起步](./Document/resourceManage.md.md)
-
-## 多入口的打包配置
-
-[多入口打包](./Document/multiplePage.md)
-
-## 开发环境
-
-[develop envirement](./Document/developEnvirement.md)
-
-## 代码分离
-
-[splitChunk](./Document/splitChunk.md)
-
-## 缓存
-
-[catching](./Document/caching.md)
+[guide](./guide_library.md)
