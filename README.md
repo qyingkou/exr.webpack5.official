@@ -33,3 +33,7 @@ javascript 应用的静态模块打包工具，它从入口开始分析依赖图
 ## 代码分离
 
 [splitChunk](./Document/splitChunk.md)
+
+## 缓存
+
+[catching](./Document/caching.md)

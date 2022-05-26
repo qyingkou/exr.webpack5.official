@@ -17,7 +17,18 @@ module.exports = {
     clean: true,
   },
   optimization: {
+    // 提取引导模板(extracting boilerplate)
     runtimeChunk: "single",
+    // 提取不太会变的模块
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
   },
   devtool: "inline-source-map",
   devServer: {
